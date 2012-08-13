@@ -34,7 +34,7 @@ cp $LEIN_BIN_SOURCE $LEIN_BIN_PATH
 sed -i s/##LEIN_VERSION##/$LEIN_VERSION/ $LEIN_BIN_PATH
 
 LEIN_PROFILES_SOURCE="$(dirname $0)/../opt/profiles.clj"
-cp -n $LEIN_PROFILES_SOURCE "$BUILD_DIR/.lein"
+cp $LEIN_PROFILES_SOURCE "$BUILD_DIR/.lein"
 
 # unpack existing cache
 CACHE_REPOSITORY="$CACHE_DIR/.m2/"
